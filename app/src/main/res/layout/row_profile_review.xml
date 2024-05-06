@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="Autofill">
+    <!--<data>-->
+    <!--<variable-->
+    <!--name="viewModel"-->
+    <!--type="com.q8intouch.ecovve.ui.home.HomeViewModel"/>-->
+    <!--</data>-->
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_24sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_4sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/view"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="25dp"
+                android:src="@drawable/rate_bg"
+                app:layout_constraintBottom_toBottomOf="@+id/txtShopOpenStatus"
+                app:layout_constraintEnd_toEndOf="@+id/txtShopOpenStatus"
+                app:layout_constraintStart_toStartOf="@+id/txtShopOpenStatus"
+                app:layout_constraintTop_toTopOf="@+id/txtShopOpenStatus"
+                app:riv_corner_radius="@dimen/_5sdp" />
+
+
+            <TextView
+                android:id="@+id/txtShopOpenStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:drawableStart="@drawable/star"
+                android:drawablePadding="6dp"
+                android:paddingEnd="@dimen/_4sdp"
+                android:text="4.3"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/poppins_bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgShopLogo"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:background="@drawable/cafe_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtShopName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:text="Perks Cafe"
+                android:textColor="@color/textDarkGray"
+                android:textStyle="bold"
+                app:fontFamily="@font/poppins_bold"
+                app:layout_constraintBottom_toTopOf="@+id/txtShopDate"
+                app:layout_constraintEnd_toStartOf="@id/txtShopOpenStatus"
+                app:layout_constraintStart_toEndOf="@+id/imgShopLogo"
+                app:layout_constraintTop_toTopOf="@+id/imgShopLogo"
+                app:layout_constraintVertical_chainStyle="spread" />
+
+            <TextView
+                android:id="@+id/txtShopDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:text="20 Oct 16, 11:50 PM"
+                android:textColor="@color/textLightGray"
+                android:textSize="12sp"
+                app:fontFamily="@font/poppins"
+                app:layout_constraintStart_toStartOf="@id/txtShopName"
+                app:layout_constraintTop_toBottomOf="@id/txtShopName" />
+
+
+            <TextView
+                android:id="@+id/txtDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+                android:textColor="#646464"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/imgShopLogo"
+                app:layout_constraintTop_toBottomOf="@+id/txtShopDate" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_24sdp"
+                android:drawableEnd="@drawable/ic_arrow_right"
+                android:drawablePadding="@dimen/_12sdp"
+                android:text="@string/more_details"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                app:fontFamily="@font/poppins_semibold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txtDesc"
+                app:layout_constraintTop_toBottomOf="@+id/txtDesc" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

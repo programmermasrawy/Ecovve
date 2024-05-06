@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="Autofill">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.q8intouch.ecovve.ui.cart.payment_method_edit.PaymentMethodEditViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:background="@color/textWhite">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/secNumberCard"
+                style="@style/InputCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24sdp"
+                android:visibility="visible"
+                app:cardCornerRadius="@dimen/_12sdp"
+                app:cardElevation="2dp"
+                app:layout_constraintBottom_toBottomOf="@+id/card2"
+                app:layout_constraintEnd_toEndOf="@+id/card1"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/card2"
+                app:layout_constraintTop_toTopOf="@+id/card2">
+
+
+                <EditText
+                    android:id="@+id/etCardNumber2"
+                    style="@style/InputText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:drawablePadding="@dimen/_24sdp"
+                    android:fontFamily="@font/nunito"
+                    android:hint="------"
+                    android:inputType="textPersonName"
+                    android:padding="@dimen/_16sdp"
+                    android:textSize="14sp"
+                    tools:ignore="TextFields" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/lblOrderType"
+                style="@style/textTitlePrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:text="@string/add_payment_method"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnVisaMethod"
+                android:layout_width="86dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="@dimen/_24sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:layout_constraintEnd_toStartOf="@+id/btnKnetMethod"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblOrderType"
+                app:strokeColor="@color/colorPrimary"
+                app:strokeWidth="2dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:src="@drawable/logo_visa" />
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnKnetMethod"
+                android:layout_width="86dp"
+                android:layout_height="55dp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/btnVisaMethod"
+                app:layout_constraintEnd_toStartOf="@+id/btnMasterCardMethod"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btnVisaMethod"
+                app:layout_constraintTop_toTopOf="@+id/btnVisaMethod"
+                app:strokeColor="@color/GrayED"
+                app:strokeWidth="2dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:src="@drawable/logo_knet" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnMasterCardMethod"
+                android:layout_width="86dp"
+                android:layout_height="55dp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/btnKnetMethod"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btnKnetMethod"
+                app:layout_constraintTop_toTopOf="@+id/btnKnetMethod"
+                app:strokeColor="@color/GrayED"
+                app:strokeWidth="2dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:src="@drawable/logo_master_card" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card1"
+                style="@style/InputCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_24sdp"
+                app:cardCornerRadius="@dimen/_12sdp"
+                app:cardElevation="2dp"
+                app:layout_constraintEnd_toEndOf="@+id/btnMasterCardMethod"
+                app:layout_constraintStart_toStartOf="@+id/btnVisaMethod"
+                app:layout_constraintTop_toBottomOf="@+id/btnKnetMethod">
+
+                <EditText
+                    android:id="@+id/etCardName"
+                    style="@style/InputText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito"
+                    android:hint="@string/name_on_card"
+                    android:inputType="textPersonName"
+                    android:padding="@dimen/_16sdp"
+                    android:textSize="14sp"
+                    tools:ignore="TextFields" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card2"
+                style="@style/InputCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:cardCornerRadius="@dimen/_12sdp"
+                app:cardElevation="2dp"
+                app:layout_constraintEnd_toStartOf="@+id/secNumberCard"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="@+id/card1"
+                app:layout_constraintTop_toBottomOf="@+id/card1">
+
+                <EditText
+                    android:id="@+id/etCardNumber"
+                    style="@style/InputText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito"
+                    android:hint="@string/card_number"
+                    android:inputType="textPersonName"
+                    android:padding="@dimen/_16sdp"
+                    android:textSize="14sp"
+                    tools:ignore="TextFields" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card3"
+                style="@style/InputCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:cardCornerRadius="@dimen/_12sdp"
+                app:cardElevation="2dp"
+                app:layout_constraintEnd_toEndOf="@+id/btnMasterCardMethod"
+                app:layout_constraintStart_toStartOf="@+id/btnVisaMethod"
+                app:layout_constraintTop_toBottomOf="@+id/card2">
+
+                <EditText
+                    android:id="@+id/etCCV"
+                    style="@style/InputText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito"
+                    android:hint="@string/ccv"
+                    android:inputType="textPersonName"
+                    android:padding="@dimen/_16sdp"
+                    android:textSize="14sp"
+                    tools:ignore="TextFields" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/month"
+                android:textColor="@color/textMoreDarkGray"
+                app:fontFamily="@font/nunito_bold"
+                app:layout_constraintBottom_toBottomOf="@+id/card4"
+                app:layout_constraintStart_toStartOf="@+id/card3"
+                app:layout_constraintTop_toTopOf="@+id/card4" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card4"
+                style="@style/InputCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:cardCornerRadius="@dimen/_12sdp"
+                app:cardElevation="2dp"
+                app:layout_constraintStart_toEndOf="@+id/textView13"
+                app:layout_constraintTop_toBottomOf="@+id/card3">
+
+
+                <EditText
+                    android:id="@+id/etMonth"
+                    style="@style/InputText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:drawablePadding="@dimen/_24sdp"
+                    android:fontFamily="@font/nunito"
+                    android:hint="01"
+                    android:inputType="textPersonName"
+                    android:padding="@dimen/_16sdp"
+                    android:textSize="14sp"
+                    tools:ignore="TextFields" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:text="@string/year"
+                android:textColor="@color/textMoreDarkGray"
+                app:fontFamily="@font/nunito_bold"
+                app:layout_constraintBottom_toBottomOf="@+id/card5"
+                app:layout_constraintEnd_toStartOf="@+id/card5"
+                app:layout_constraintTop_toTopOf="@+id/card5" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card5"
+                style="@style/InputCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:cardCornerRadius="@dimen/_12sdp"
+                app:cardElevation="2dp"
+                app:layout_constraintEnd_toEndOf="@+id/card3"
+                app:layout_constraintTop_toBottomOf="@+id/card3">
+
+
+                <EditText
+                    android:id="@+id/etYear"
+                    style="@style/InputText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:drawablePadding="@dimen/_24sdp"
+                    android:fontFamily="@font/nunito"
+                    android:hint="18"
+                    android:inputType="textPersonName"
+                    android:padding="@dimen/_16sdp"
+                    android:textSize="14sp"
+                    tools:ignore="TextFields" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <Button
+                android:id="@+id/btnAddPaymentMethod"
+                style="@style/bigButton"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:elevation="3dp"
+                android:text="@string/add_visa"
+                android:textAllCaps="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/card3"
+                app:layout_constraintStart_toStartOf="@+id/card3"
+                app:layout_constraintTop_toBottomOf="@+id/card4" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

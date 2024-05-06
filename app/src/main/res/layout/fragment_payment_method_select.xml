@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="Autofill">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.q8intouch.ecovve.ui.cart.payment_method_select.PaymentMethodSelectViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:layoutDirection="locale">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical"
+            tools:background="@color/background_app">
+
+            <TextView
+                android:id="@+id/lblOrderType"
+                style="@style/textTitlePrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:text="@string/payment_method"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPaymentMethodSelect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblOrderType">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <!--<com.google.android.material.card.MaterialCardView-->
+            <!--android:id="@+id/materialCardView3"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_marginStart="@dimen/_30sdp"-->
+            <!--android:layout_marginEnd="@dimen/_30sdp"-->
+            <!--android:layout_marginTop="@dimen/_16sdp"-->
+            <!--app:cardCornerRadius="@dimen/_10sdp"-->
+            <!--app:cardElevation="@dimen/_4sdp"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/lblOrderType">-->
+
+            <!--<androidx.constraintlayout.widget.ConstraintLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:paddingBottom="@dimen/_16sdp">-->
+
+            <!--<RadioButton-->
+            <!--android:id="@+id/rbPaymentMethod"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_marginStart="@dimen/_16sdp"-->
+            <!--android:layout_marginTop="@dimen/_16sdp"-->
+            <!--android:paddingStart="@dimen/_8sdp"-->
+            <!--android:buttonTint="@color/colorPrimary"-->
+            <!--android:textColor="@color/textDarkGray"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textStyle="bold"-->
+            <!--android:text="@string/visa_card"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/txtPaymentDetail"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="@dimen/_30sdp"-->
+            <!--android:layout_marginTop="@dimen/_8sdp"-->
+            <!--android:layout_marginEnd="@dimen/_8sdp"-->
+            <!--android:paddingStart="@dimen/_10sdp"-->
+            <!--android:textColor="@color/textLightGray"-->
+            <!--android:textSize="12sp"-->
+            <!--android:text="**** **** **** 1568"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--app:layout_constraintEnd_toStartOf="@+id/imgPaymentIcon"-->
+            <!--app:layout_constraintStart_toStartOf="@+id/rbPaymentMethod"-->
+
+            <!--app:layout_constraintTop_toBottomOf="@+id/rbPaymentMethod" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/imgPaymentIcon"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="@dimen/_16sdp"-->
+            <!--android:src="@drawable/ic_visa_method"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent"-->
+            <!--app:layout_constraintVertical_bias="0.6" />-->
+            <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+            <!--</com.google.android.material.card.MaterialCardView>-->
+            <!--<com.google.android.material.card.MaterialCardView-->
+            <!--android:id="@+id/materialCardView4"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_marginStart="@dimen/_30sdp"-->
+            <!--android:layout_marginEnd="@dimen/_30sdp"-->
+            <!--android:layout_marginTop="@dimen/_16sdp"-->
+            <!--app:cardCornerRadius="@dimen/_10sdp"-->
+            <!--app:cardElevation="@dimen/_4sdp"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/materialCardView3">-->
+
+            <!--<androidx.constraintlayout.widget.ConstraintLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:paddingBottom="@dimen/_16sdp">-->
+
+            <!--<RadioButton-->
+            <!--android:id="@+id/rbPaymentMethod1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="@dimen/_16sdp"-->
+            <!--android:layout_marginTop="@dimen/_16sdp"-->
+            <!--android:paddingStart="@dimen/_8sdp"-->
+            <!--android:buttonTint="@color/colorPrimary"-->
+            <!--android:textColor="@color/textDarkGray"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textStyle="bold"-->
+            <!--android:text="@string/master_card"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/txtPaymentDetai1"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="@dimen/_30sdp"-->
+            <!--android:layout_marginTop="@dimen/_8sdp"-->
+            <!--android:layout_marginEnd="@dimen/_8sdp"-->
+            <!--android:textColor="@color/textLightGray"-->
+            <!--android:textSize="12sp"-->
+            <!--android:paddingStart="@dimen/_10sdp"-->
+            <!--android:text="**** **** **** 1568"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--app:layout_constraintEnd_toStartOf="@+id/imgPaymentIcon1"-->
+            <!--app:layout_constraintStart_toStartOf="@+id/rbPaymentMethod1"-->
+
+            <!--app:layout_constraintTop_toBottomOf="@+id/rbPaymentMethod1" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/imgPaymentIcon1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="@dimen/_16sdp"-->
+            <!--android:src="@drawable/ic_mastercard_method"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
+            <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+            <!--</com.google.android.material.card.MaterialCardView>-->
+            <!--<com.google.android.material.card.MaterialCardView-->
+            <!--android:id="@+id/materialCardView5"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_marginStart="@dimen/_30sdp"-->
+            <!--android:layout_marginEnd="@dimen/_30sdp"-->
+            <!--android:layout_marginTop="@dimen/_16sdp"-->
+            <!--app:cardCornerRadius="@dimen/_10sdp"-->
+            <!--app:cardElevation="@dimen/_4sdp"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/materialCardView4">-->
+
+            <!--<androidx.constraintlayout.widget.ConstraintLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:paddingBottom="@dimen/_16sdp">-->
+
+            <!--<RadioButton-->
+            <!--android:id="@+id/rbPaymentMethod2"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="@dimen/_16sdp"-->
+            <!--android:layout_marginTop="@dimen/_16sdp"-->
+            <!--android:paddingStart="@dimen/_8sdp"-->
+            <!--android:buttonTint="@color/colorPrimary"-->
+            <!--android:textColor="@color/textDarkGray"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textStyle="bold"-->
+            <!--android:text="@string/cash_on_delivery"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
+            <!--<ImageView-->
+            <!--android:id="@+id/imgPaymentIcon2"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="@dimen/_16sdp"-->
+            <!--android:src="@drawable/ic_cash"-->
+            <!--app:layout_constraintBottom_toBottomOf="@+id/rbPaymentMethod2"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="@+id/rbPaymentMethod2" />-->
+            <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+            <!--</com.google.android.material.card.MaterialCardView>-->
+
+            <TextView
+                android:id="@+id/txtTotalPayment"
+                style="@style/grayBoldPoppins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:layout_marginEnd="@dimen/_24sdp"
+                android:textSize="16sp"
+                app:fontFamily="@font/poppins"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView5" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnEditPaymentMethods"
+                style="@style/bigButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:background="@drawable/btn_big_borders_only"
+                android:text="@string/edit_payment_methods"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtTotalPayment" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnContinue"
+                style="@style/bigButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/continue_order"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnEditPaymentMethods" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

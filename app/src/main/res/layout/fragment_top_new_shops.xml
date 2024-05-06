@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="Autofill">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.q8intouch.ecovve.ui.top_new_shops.TopNewShopsViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:layoutDirection="ltr">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:background="@color/background_app">
+
+                <TextView
+                    android:id="@+id/lblTopCafes"
+                    style="@style/textTitlePrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:drawableStart="@drawable/ic_star_top"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:text="@string/top_cafes"
+                    app:fontFamily="@font/poppins_bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/lblNewCafes"
+                    style="@style/textTitlePrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:drawableStart="@drawable/ic_new_cafes"
+                    android:drawablePadding="@dimen/_12sdp"
+                    android:text="@string/new_cafes"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvTopNewShops"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_4sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblNewCafes"
+                    app:layout_empty="@null"
+                    app:layout_moreProgress="@layout/loading_more"
+                    app:mainLayoutId="@layout/layout_recyclerview_verticalscroll"
+                    app:recyclerClipToPadding="false"
+                    app:scrollbarStyle="insideInset">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <include
+                    android:id="@+id/load_more"
+                    layout="@layout/loading_more" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+</layout>

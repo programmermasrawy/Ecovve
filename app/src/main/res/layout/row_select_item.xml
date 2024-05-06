@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_210sdp"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="19dp"
+            android:elevation="0dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="3dp"
+            app:cardUseCompatPadding="true"
+
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/_30sdp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_140sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/imagedrop2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_corner_radius_top_left="15dp"
+                    app:riv_corner_radius_top_right="15dp" />
+
+                <ImageView
+                    android:id="@+id/view"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/rate_bg"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtRate"
+                    app:layout_constraintEnd_toEndOf="@+id/txtRate"
+                    app:layout_constraintStart_toStartOf="@+id/txtRate"
+                    app:layout_constraintTop_toTopOf="@+id/txtRate" />
+
+
+                <TextView
+                    android:id="@+id/txtRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:drawableStart="@drawable/star"
+                    android:drawablePadding="6dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="4.25"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageView3"
+                    app:layout_constraintVertical_bias="0.13999999" />
+
+                <TextView
+                    android:id="@+id/txtItemDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:lines="2"
+                    android:text="1 cake, cup of caffe"
+                    android:textColor="#888E9B"
+                    app:layout_constraintEnd_toEndOf="@+id/txtItemName"
+                    app:layout_constraintStart_toStartOf="@+id/txtItemName"
+                    app:layout_constraintTop_toBottomOf="@+id/txtItemName" />
+
+                <TextView
+                    android:id="@+id/txtItemName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="The Coffebreak"
+                    android:textColor="@color/textDarkGray"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/poppins_bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/price_bg_blue"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:padding="0dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtItemPrice"
+                    app:layout_constraintEnd_toEndOf="@+id/lblCurrency"
+                    app:layout_constraintHorizontal_bias="0.50"
+                    app:layout_constraintStart_toStartOf="@+id/txtItemPrice"
+                    app:layout_constraintTop_toTopOf="@+id/txtItemPrice" />
+
+                <TextView
+
+                    android:id="@+id/txtItemPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:padding="@dimen/_8sdp"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingEnd="0dp"
+                    android:text="50.00"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/poppins_bold"
+
+                    app:layout_constraintEnd_toStartOf="@+id/lblCurrency"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtItemDescription" />
+
+                <TextView
+
+                    android:id="@+id/lblCurrency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:padding="@dimen/_8sdp"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:text="@string/kd"
+                    android:textColor="@android:color/white"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/poppins_bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtItemPrice"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/txtItemPrice"
+                    app:layout_constraintTop_toBottomOf="@+id/txtItemDescription" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddToCart"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@drawable/btn_bg_white"
+        android:elevation="1dp"
+        android:fontFamily="@font/poppins"
+        android:paddingBottom="@dimen/_4sdp"
+        android:text="@string/add_to_cart"
+        android:textAllCaps="false"
+        android:textColor="#FF1515"
+        android:textSize="13sp"
+        android:translationZ="@dimen/_16sdp" />
+
+</FrameLayout>

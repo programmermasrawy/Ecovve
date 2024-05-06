@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "22482460570",
+    "firebase_url": "https://ecovve-221718.firebaseio.com",
+    "project_id": "ecovve-221718",
+    "storage_bucket": "ecovve-221718.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22482460570:android:073c94063f64ff0e",
+        "android_client_info": {
+          "package_name": "com.q8intouch.ecovve"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "22482460570-tl2u6d3l6f5ld50rvppim3a69bun42jm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.q8intouch.ecovve",
+            "certificate_hash": "be39ac00f00b86721b8c98fc113581ed7ea107bb"
+          }
+        },
+        {
+          "client_id": "22482460570-ujikmgffd7jo1kiqo783d7vsvmq9117v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjitQnh3Q7C5luGo3AxYM7za22daIEdjA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "22482460570-ujikmgffd7jo1kiqo783d7vsvmq9117v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

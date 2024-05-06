@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/textWhite"
+    android:orientation="vertical"
+    tools:context=".ui.social.SocialFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/_4sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            app:tabIndicatorColor="@color/colorPrimary"
+            app:tabSelectedTextColor="#383838"
+            app:tabTextAppearance="@style/tabTextFontAllCaps"
+            app:tabTextColor="@color/textGray">
+
+            <!--<com.google.android.material.tabs.TabItem-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="@dimen/_50sdp"-->
+            <!--android:text="@string/messages"-->
+
+            <!--/>-->
+
+            <!--<com.google.android.material.tabs.TabItem-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="@dimen/_50sdp"-->
+            <!--android:text="@string/friends" />-->
+
+            <!--<com.google.android.material.tabs.TabItem-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="@dimen/_50sdp"-->
+            <!--android:text="@string/groups" />-->
+        </com.google.android.material.tabs.TabLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView">
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:background="@drawable/glow_fab"
+        android:padding="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAddFriend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:src="@drawable/ic_add_contact"
+            app:backgroundTint="@color/colorPrimary"
+            app:borderWidth="0dp"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:maxImageSize="35dp" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

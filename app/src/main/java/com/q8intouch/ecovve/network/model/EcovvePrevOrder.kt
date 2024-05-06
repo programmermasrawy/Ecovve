@@ -1,0 +1,150 @@
+package com.q8intouch.ecovve.network.model
+
+import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
+
+@JsonClass(generateAdapter = true)
+data class EcovvePrevOrder(
+    @Json(name = "data")
+    var `data`: Data
+) {
+    @JsonClass(generateAdapter = true)
+    data class Data(
+        @Json(name = "id")
+        var id: Int,
+        @Json(name = "number")
+        var number: String,
+        @Json(name = "status")
+        var status: String,
+        @Json(name = "delivery")
+        var delivery: String,
+        @Json(name = "address")
+        var address: Any?,
+        @Json(name = "total_qty")
+        var totalQty: Int,
+        @Json(name = "total_price_before_tax")
+        var totalPriceBeforeTax: String,
+        @Json(name = "tax_val")
+        var taxVal: String,
+        @Json(name = "total_price_after_tax")
+        var totalPriceAfterTax: String,
+        @Json(name = "coupon_code")
+        var couponCode: String,
+        @Json(name = "user_free_credit")
+        var userFreeCredit: String,
+        @Json(name = "gift_card_id")
+        var giftCardId: Int,
+        @Json(name = "notes")
+        var notes: String,
+        @Json(name = "user_id")
+        var userId: Int,
+        @Json(name = "cart_id")
+        var cartId: Int,
+        @Json(name = "paid")
+        var paid: String,
+        @Json(name = "payment_option")
+        var paymentOption: String,
+        @Json(name = "deliver_time")
+        var deliverTime: Any?,
+        @Json(name = "created_at")
+        var createdAt: String,
+        @Json(name = "updated_at")
+        var updatedAt: String,
+        @Json(name = "user")
+        var user: User,
+        @Json(name = "suborder")
+        var suborder: List<Suborder>,
+        @Json(name = "cart")
+        var cart: Cart
+    ) {
+        @JsonClass(generateAdapter = true)
+        data class User(
+            @Json(name = "id")
+            var id: Int,
+            @Json(name = "name")
+            var name: String,
+            @Json(name = "email")
+            var email: String,
+            @Json(name = "phone")
+            var phone: String,
+            @Json(name = "avatar")
+            var avatar: String,
+            @Json(name = "area")
+            var area: String,
+            @Json(name = "gender")
+            var gender: String,
+            @Json(name = "birthday")
+            var birthday: String,
+            @Json(name = "points")
+            var points: Int,
+            @Json(name = "free_credit")
+            var freeCredit: String,
+            @Json(name = "social_media")
+            var socialMedia: List<Any>,
+            @Json(name = "verification_code")
+            var verificationCode: String,
+            @Json(name = "active")
+            var active: Int,
+            @Json(name = "city_id")
+            var cityId: Int,
+            @Json(name = "all_time_habits")
+            var allTimeHabits: List<Any>,
+            @Json(name = "used_coupons")
+            var usedCoupons: List<Any>,
+            @Json(name = "created_at")
+            var createdAt: String,
+            @Json(name = "updated_at")
+            var updatedAt: String,
+            @Json(name = "deleted_at")
+            var deletedAt: Any?
+        )
+
+        @JsonClass(generateAdapter = true)
+        data class Suborder(
+            @Json(name = "id")
+            var id: Int,
+            @Json(name = "number")
+            var number: String,
+            @Json(name = "item")
+            var item: List<MenuResponse.Data.Items>,
+            @Json(name = "status")
+            var status: String,
+            @Json(name = "delivery")
+            var delivery: String,
+            @Json(name = "total_qty")
+            var totalQty: Int,
+            @Json(name = "total_price_before_tax")
+            var totalPriceBeforeTax: String,
+            @Json(name = "tax_val")
+            var taxVal: String,
+            @Json(name = "total_price_after_tax")
+            var totalPriceAfterTax: String,
+            @Json(name = "order_id")
+            var orderId: Int,
+            @Json(name = "outlet_id")
+            var outletId: Int,
+            @Json(name = "cafe_notes")
+            var cafeNotes: List<Any>,
+            @Json(name = "delivery_man_id")
+            var deliveryManId: Int,
+            @Json(name = "created_at")
+            var createdAt: String,
+            @Json(name = "updated_at")
+            var updatedAt: String
+        )
+
+        @JsonClass(generateAdapter = true)
+        data class Cart(
+            @Json(name = "id")
+            var id: Int,
+            @Json(name = "item")
+            var item: List<Any>,
+            @Json(name = "notes")
+            var notes: String,
+            @Json(name = "created_at")
+            var createdAt: String,
+            @Json(name = "updated_at")
+            var updatedAt: String
+        )
+    }
+}

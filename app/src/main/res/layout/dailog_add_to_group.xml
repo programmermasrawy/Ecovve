@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/_10sdp">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:background="@color/textWhite">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@color/textWhite"
+            android:drawableStart="@drawable/ic_add_to_group_search"
+            android:drawablePadding="@dimen/_16sdp"
+            android:hint="@string/search_group"
+            android:textColor="@color/GrayA1"
+            android:textSize="12sp"
+            app:fontFamily="@font/poppins" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:background="#EDF2F5" />
+
+        <include layout="@layout/row_invite_to_group" />
+
+        <include layout="@layout/row_invite_to_group" />
+
+        <include layout="@layout/row_invite_to_group" />
+
+        <include layout="@layout/row_invite_to_group" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

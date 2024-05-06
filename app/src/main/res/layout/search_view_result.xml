@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="Autofill">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.q8intouch.ecovve.ui.search.ItemsViewModel" />
+    </data>
+    <!--<androidx.core.widget.NestedScrollView android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/nestedlayout"-->
+    <!--android:fillViewport="true">-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_app"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/txtNumOfCafe"
+            style="@style/SpinnerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:textColor="@color/browser_actions_title_color"
+            android:textStyle="bold"
+            android:visibility="gone"
+
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/items"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_empty="@null"
+            app:layout_moreProgress="@layout/loading_more"
+            app:mainLayoutId="@layout/layout_recyclerview_verticalscroll"
+            app:recyclerClipToPadding="false" />
+
+        <include
+            android:id="@+id/load_more"
+            layout="@layout/loading_more"
+            android:visibility="gone" />
+    </LinearLayout>
+    <!--</androidx.core.widget.NestedScrollView>-->
+</layout>

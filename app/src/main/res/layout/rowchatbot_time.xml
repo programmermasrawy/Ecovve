@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none"
+    tools:background="@color/textWhite">
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/_80sdp"
+        android:paddingEnd="@dimen/_24sdp"
+        app:chipSpacing="@dimen/_8sdp">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/hour1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/_40sdp"
+            android:text="@string/after_1_hour"
+            android:textAlignment="center"
+            android:textAppearance="@style/quantityChip"
+            android:textColor="@color/colorPrimary"
+            app:chipBackgroundColor="@android:color/transparent"
+            app:chipCornerRadius="@dimen/_20sdp"
+            app:chipMinHeight="@dimen/_40sdp"
+            app:chipStrokeColor="@color/colorPrimary"
+            app:chipStrokeWidth="1dp"
+            app:fontFamily="@font/poppins_semibold" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/hour2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/_40sdp"
+            android:minHeight="@dimen/_40sdp"
+            android:text="@string/after_2_hours"
+            android:textAlignment="center"
+            android:textAppearance="@style/quantityChip"
+            android:textColor="@color/colorPrimary"
+            app:chipBackgroundColor="@android:color/transparent"
+            app:chipCornerRadius="@dimen/_20sdp"
+            app:chipStrokeColor="@color/colorPrimary"
+            app:chipStrokeWidth="1dp"
+            app:fontFamily="@font/poppins_semibold" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/hour3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/_40sdp"
+            android:minHeight="@dimen/_40sdp"
+            android:text="@string/after_3_hours"
+            android:textAlignment="center"
+            android:textAppearance="@style/quantityChip"
+            android:textColor="@color/textWhite"
+            app:chipBackgroundColor="@color/colorPrimary"
+            app:chipCornerRadius="@dimen/_20sdp"
+            app:fontFamily="@font/poppins_semibold" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/hour4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/_40sdp"
+            android:minHeight="@dimen/_40sdp"
+            android:text="@string/after_4_hours"
+            android:textAlignment="center"
+            android:textAppearance="@style/quantityChip"
+            android:textColor="@color/colorPrimary"
+            app:chipBackgroundColor="@android:color/transparent"
+            app:chipCornerRadius="@dimen/_20sdp"
+            app:chipStrokeColor="@color/colorPrimary"
+            app:chipStrokeWidth="1dp"
+            app:fontFamily="@font/poppins_semibold" />
+        <!--<com.google.android.material.chip.Chip-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="10:20"-->
+        <!--android:minWidth="@dimen/_40sdp"-->
+        <!--android:textAlignment="center"-->
+        <!--app:chipCornerRadius="@dimen/_20sdp"-->
+        <!--android:minHeight="@dimen/_40sdp"-->
+        <!--android:textAppearance="@style/quantityChip"-->
+        <!--app:fontFamily="@font/poppins_semibold"-->
+        <!--app:chipStrokeWidth="1dp"-->
+        <!--app:chipStrokeColor="@color/colorPrimary"-->
+        <!--android:textColor="@color/colorPrimary"-->
+        <!--app:chipBackgroundColor="@android:color/transparent"-->
+        <!--/>-->
+        <!--<com.google.android.material.chip.Chip-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="10:25"-->
+        <!--android:minWidth="@dimen/_40sdp"-->
+        <!--android:textAlignment="center"-->
+        <!--app:chipCornerRadius="@dimen/_20sdp"-->
+        <!--android:minHeight="@dimen/_40sdp"-->
+        <!--android:textAppearance="@style/quantityChip"-->
+        <!--app:fontFamily="@font/poppins_semibold"-->
+        <!--app:chipStrokeWidth="1dp"-->
+        <!--app:chipStrokeColor="@color/colorPrimary"-->
+        <!--android:textColor="@color/colorPrimary"-->
+        <!--app:chipBackgroundColor="@android:color/transparent"-->
+        <!--/>-->
+        <!--<com.google.android.material.chip.Chip-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="10:30"-->
+        <!--android:minWidth="@dimen/_40sdp"-->
+        <!--android:textAlignment="center"-->
+        <!--app:chipCornerRadius="@dimen/_20sdp"-->
+        <!--android:minHeight="@dimen/_40sdp"-->
+        <!--android:textAppearance="@style/quantityChip"-->
+        <!--app:fontFamily="@font/poppins_semibold"-->
+        <!--app:chipStrokeWidth="1dp"-->
+        <!--app:chipStrokeColor="@color/colorPrimary"-->
+        <!--android:textColor="@color/colorPrimary"-->
+        <!--app:chipBackgroundColor="@android:color/transparent"-->
+        <!--/>-->
+
+    </com.google.android.material.chip.ChipGroup>
+
+</HorizontalScrollView>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="end"
+    android:orientation="horizontal"
+    tools:background="#e4abab">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.2" />
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/bg_chat_me">
+
+        <TextView
+            style="@style/halfDarkPoppins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:id="@+id/message"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="8sp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="8sp"
+            android:text="Dynamic corners radius is in progress" />
+
+    </FrameLayout>
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgContactImage"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_gravity="center_vertical|end"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:src="@drawable/profile_image"
+        app:riv_corner_radius="64dp" />
+
+
+</LinearLayout>

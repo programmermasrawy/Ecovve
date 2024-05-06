@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/textWhite"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/_8sdp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_4sdp"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="#C8C8C8">
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|fill_vertical"
+        android:paddingStart="@dimen/_16sdp"
+        android:paddingTop="@dimen/_16sdp"
+        android:paddingEnd="@dimen/_16sdp"
+        android:paddingBottom="@dimen/_16sdp"
+        android:text="@string/start_again"
+        android:textAllCaps="false"
+        android:textColor="@color/textHalfDarkGray"
+        android:textSize="15sp"
+        app:fontFamily="@font/poppins" />
+
+    <View
+        style="@style/horizontalDivider"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:background="#A1A1A1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|fill_vertical"
+        android:paddingStart="@dimen/_16sdp"
+        android:paddingTop="@dimen/_16sdp"
+        android:paddingEnd="@dimen/_16sdp"
+        android:paddingBottom="@dimen/_16sdp"
+        android:text="@string/view_cart"
+        android:textAllCaps="false"
+        android:textColor="@color/textHalfDarkGray"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:fontFamily="@font/poppins" />
+
+    <View
+        style="@style/horizontalDivider"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:background="#A1A1A1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|fill_vertical"
+        android:paddingStart="@dimen/_16sdp"
+        android:paddingTop="@dimen/_16sdp"
+        android:paddingEnd="@dimen/_16sdp"
+        android:paddingBottom="@dimen/_16sdp"
+        android:text="Checkout"
+        android:textAllCaps="false"
+        android:textColor="@color/textHalfDarkGray"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:fontFamily="@font/poppins" />
+
+    <View
+        style="@style/horizontalDivider"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:background="#A1A1A1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/startAgain"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|fill_vertical"
+        android:paddingStart="@dimen/_16sdp"
+        android:paddingTop="@dimen/_16sdp"
+        android:paddingEnd="@dimen/_16sdp"
+        android:paddingBottom="@dimen/_16sdp"
+        android:text="@string/find_other_cafes"
+        android:textAllCaps="false"
+        android:textColor="@color/textHalfDarkGray"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:fontFamily="@font/poppins" />
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/SpinnerText"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/textWhite"
+    android:drawableStart="@drawable/ic_coffee_cup"
+    android:drawableEnd="@drawable/ic_arrow_down"
+    android:gravity="center"
+    android:orientation="vertical" />

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/settings_nav"
+    app:startDestination="@id/settingsFragment">
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.q8intouch.ecovve.ui.settings.SettingsFragment"
+        android:label="Settings">
+        <action
+            android:id="@+id/action_settingsfragment_to_account_info_fragment"
+            app:destination="@id/accountInfoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_settingsFragment_to_notificationsSettingsFragment"
+            app:destination="@id/notificationsSettingsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_changeEmailFragment"
+            app:destination="@id/changeEmailFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_changeAddressFragment"
+            app:destination="@id/changeAddressFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_changePaymentMethodFragment"
+            app:destination="@id/changePaymentMethodFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/accountInfoFragment"
+        android:name="com.q8intouch.ecovve.ui.settings.account_info.AccountInfoFragment"
+        android:label="Account Info">
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/notificationsSettingsFragment"
+        android:name="com.q8intouch.ecovve.ui.settings.notification_settings.NotificationsSettingsFragment"
+        android:label="Notifications Settings" />
+    <fragment
+        android:id="@+id/changeEmailFragment"
+        android:name="com.q8intouch.ecovve.ui.settings.change_email.ChangeEmailFragment"
+        android:label="Change Email" />
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.q8intouch.ecovve.ui.settings.change_password.ChangePasswordFragment"
+        android:label="Change Password" />
+    <fragment
+        android:id="@+id/changePaymentMethodFragment"
+        android:name="com.q8intouch.ecovve.ui.settings.change_payment_methods.ChangePaymentMethodFragment"
+        android:label="Change Payment Method" />
+    <fragment
+        android:id="@+id/changeAddressFragment"
+        android:name="com.q8intouch.ecovve.ui.settings.change_address.ChangeAddressFragment"
+        android:label="Change Address" />
+
+
+</navigation>

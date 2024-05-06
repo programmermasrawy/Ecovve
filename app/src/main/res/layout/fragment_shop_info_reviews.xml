@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        app:cardCornerRadius="@dimen/_8sdp"
+        app:cardElevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_16sdp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/quality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:minWidth="@dimen/_45sdp"
+                    android:text="100"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/shopReviewChip"
+                    android:textColor="#707070"
+                    app:chipBackgroundColor="@android:color/transparent"
+                    app:chipCornerRadius="25dp"
+                    app:chipMinHeight="@dimen/_45sdp"
+                    app:chipStrokeColor="@color/colorPrimary"
+                    app:chipStrokeWidth="3dp"
+                    app:fontFamily="@font/poppins_bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:padding="0dp"
+                    android:text="@string/quality"
+                    android:textSize="11sp"
+                    app:fontFamily="@font/poppins" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/valueOfMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:minWidth="@dimen/_45sdp"
+                    android:text="100"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/shopReviewChip"
+                    android:textColor="#707070"
+                    app:chipBackgroundColor="@android:color/transparent"
+                    app:chipCornerRadius="25dp"
+                    app:chipMinHeight="@dimen/_45sdp"
+                    app:chipStrokeColor="@color/colorPrimary"
+                    app:chipStrokeWidth="3dp"
+                    app:fontFamily="@font/poppins_bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:padding="0dp"
+                    android:text="@string/value_for_money"
+                    android:textSize="11sp"
+                    app:fontFamily="@font/poppins" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/delTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:minWidth="@dimen/_45sdp"
+                    android:text="100"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/shopReviewChip"
+                    android:textColor="#707070"
+                    app:chipBackgroundColor="@android:color/transparent"
+                    app:chipCornerRadius="25dp"
+                    app:chipMinHeight="@dimen/_45sdp"
+                    app:chipStrokeColor="@color/colorPrimary"
+                    app:chipStrokeWidth="3dp"
+                    app:fontFamily="@font/poppins_bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:padding="0dp"
+                    android:text="@string/delivery_time"
+                    android:textSize="11sp"
+                    app:fontFamily="@font/poppins" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/packaging"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:minWidth="@dimen/_45sdp"
+                    android:text="100"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/shopReviewChip"
+                    android:textColor="#707070"
+                    app:chipBackgroundColor="@android:color/transparent"
+                    app:chipCornerRadius="25dp"
+                    app:chipMinHeight="@dimen/_45sdp"
+                    app:chipStrokeColor="@color/colorPrimary"
+                    app:chipStrokeWidth="3dp"
+                    app:fontFamily="@font/poppins_bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:padding="0dp"
+                    android:text="@string/packaging"
+                    android:textSize="11sp"
+                    app:fontFamily="@font/poppins" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvReviews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/shop_info_review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="9dp" />
+</LinearLayout>

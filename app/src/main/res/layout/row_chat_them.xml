@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="start"
+    android:orientation="horizontal"
+
+    tools:background="#e4abab">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:background="@drawable/bg_chat_them">
+
+        <TextView
+            style="@style/halfDarkPoppins"
+            android:layout_width="wrap_content"
+            android:id="@+id/message"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:text="Hi Ahmed, It is a long established  "
+            android:textColor="@color/textWhite" />
+    </FrameLayout>
+
+</LinearLayout>

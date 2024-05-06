@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="Autofill">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.q8intouch.ecovve.ui.search.filter.FilterViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/textWhite"
+        android:layoutDirection="locale">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/textWhite"
+            tools:background="@color/textWhite">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_8sdp"
+                app:cardElevation="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:text="@string/sort_by"
+                        android:textColor="@color/textMoreDarkGray"
+                        app:fontFamily="@font/poppins_semibold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/recommendedGroups"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/recommendChip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:minWidth="@dimen/_40sdp"
+                                app:chipBackgroundColor="@android:color/transparent"
+                                app:chipCornerRadius="25dp"
+                                app:chipIcon="@drawable/ic_recomended"
+                                app:chipIconTint="@color/colorPrimary"
+                                app:chipMinHeight="@dimen/_45sdp"
+                                app:chipStrokeColor="@color/colorPrimary"
+                                app:chipStrokeWidth="0.5dp"
+                                app:iconStartPadding="@dimen/_10sdp"
+                                app:textEndPadding="0dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:padding="0dp"
+                                android:text="@string/recomended"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="10sp"
+                                app:fontFamily="@font/nunito_bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/RatringGroups"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/RatingChip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:minWidth="@dimen/_40sdp"
+                                app:chipBackgroundColor="@color/transparent"
+                                app:chipCornerRadius="25dp"
+                                app:chipIcon="@drawable/ic_star_top"
+                                app:chipMinHeight="@dimen/_45sdp"
+                                app:chipStrokeColor="@color/colorPrimary"
+                                app:chipStrokeWidth="0.5dp"
+                                app:iconStartPadding="@dimen/_10sdp"
+                                app:textEndPadding="0dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:padding="0dp"
+                                android:text="@string/rating"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="10sp"
+                                app:fontFamily="@font/nunito_bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/FastGroups"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/FastChop"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:minWidth="@dimen/_40sdp"
+                                app:chipBackgroundColor="@android:color/transparent"
+                                app:chipCornerRadius="25dp"
+                                app:chipIcon="@drawable/ic_fast_delivery"
+                                app:chipMinHeight="@dimen/_45sdp"
+                                app:chipStrokeColor="@color/colorPrimary"
+                                app:chipStrokeWidth="0.5dp"
+                                app:iconStartPadding="@dimen/_10sdp"
+                                app:textEndPadding="0dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:padding="0dp"
+                                android:text="@string/fast_delivery"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="10sp"
+                                app:fontFamily="@font/nunito_bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/DelveryGroups"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/delChip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:minWidth="@dimen/_40sdp"
+                                app:chipBackgroundColor="@android:color/transparent"
+                                app:chipCornerRadius="25dp"
+                                app:chipIcon="@drawable/ic_delivery_fee"
+                                app:chipMinHeight="@dimen/_45sdp"
+                                app:chipStrokeColor="@color/colorPrimary"
+                                app:chipStrokeWidth="0.5dp"
+                                app:iconStartPadding="@dimen/_10sdp"
+                                app:textEndPadding="0dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:padding="0dp"
+                                android:text="@string/delivery_fee"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="10sp"
+                                app:fontFamily="@font/nunito_bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/MinGroups"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/minChip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:minWidth="@dimen/_40sdp"
+                                app:chipBackgroundColor="@android:color/transparent"
+                                app:chipCornerRadius="25dp"
+                                app:chipIcon="@drawable/ic_min_order"
+                                app:chipMinHeight="@dimen/_45sdp"
+                                app:chipStrokeColor="@color/colorPrimary"
+                                app:chipStrokeWidth="0.5dp"
+                                app:iconStartPadding="@dimen/_10sdp"
+                                app:textEndPadding="0dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:padding="0dp"
+                                android:text="@string/min_order"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="10sp"
+                                app:fontFamily="@font/nunito_bold" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_4sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/lblReview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:text="@string/filter_by"
+                        android:textColor="@color/textDarkGray"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/poppins_bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lblReview">
+
+                        <View
+                            android:id="@+id/view5"
+                            style="@style/LightDivider"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:background="#EDF2F5" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/_20sdp"
+                            android:paddingTop="@dimen/_16sdp"
+                            android:paddingEnd="@dimen/_20sdp"
+                            android:paddingBottom="@dimen/_16sdp"
+
+                            >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.5"
+                                android:text="@string/open_restaurant"
+                                android:textColor="@color/textLightGray"
+                                android:textSize="13sp"
+                                app:fontFamily="@font/poppins" />
+
+                            <Switch
+                                android:id="@+id/open"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:theme="@style/MySwitch" />
+                        </LinearLayout>
+
+                        <View
+                            style="@style/LightDivider"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:background="#EDF2F5" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/_20sdp"
+                            android:paddingTop="@dimen/_16sdp"
+                            android:paddingEnd="@dimen/_20sdp"
+                            android:paddingBottom="@dimen/_16sdp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.5"
+                                android:text="@string/offers"
+                                android:textColor="@color/textLightGray"
+                                android:textSize="13sp"
+                                app:fontFamily="@font/poppins" />
+
+                            <Switch
+                                android:id="@+id/offers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:theme="@style/MySwitch" />
+                        </LinearLayout>
+
+                        <View
+                            style="@style/LightDivider"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:background="#EDF2F5" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/_20sdp"
+                            android:paddingTop="@dimen/_16sdp"
+                            android:paddingEnd="@dimen/_20sdp"
+                            android:paddingBottom="@dimen/_16sdp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.5"
+                                android:text="@string/master_card"
+                                android:textColor="@color/textLightGray"
+                                android:textSize="13sp"
+                                app:fontFamily="@font/poppins" />
+
+                            <Switch
+                                android:id="@+id/master"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:theme="@style/MySwitch" />
+                        </LinearLayout>
+
+                        <View
+                            style="@style/LightDivider"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:background="#EDF2F5" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/_20sdp"
+                            android:paddingTop="@dimen/_16sdp"
+                            android:paddingEnd="@dimen/_20sdp"
+                            android:paddingBottom="@dimen/_16sdp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.5"
+                                android:text="@string/k_net"
+                                android:textColor="@color/textLightGray"
+                                android:textSize="13sp"
+                                app:fontFamily="@font/poppins" />
+
+                            <Switch
+                                android:id="@+id/knet"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:theme="@style/MySwitch" />
+                        </LinearLayout>
+
+                        <View
+                            style="@style/LightDivider"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:background="#EDF2F5" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/_20sdp"
+                            android:paddingTop="@dimen/_16sdp"
+                            android:paddingEnd="@dimen/_20sdp"
+                            android:paddingBottom="@dimen/_16sdp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.5"
+                                android:text="@string/free_delivery"
+                                android:textColor="@color/textLightGray"
+                                android:textSize="13sp"
+                                app:fontFamily="@font/poppins" />
+
+                            <Switch
+                                android:id="@+id/freed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:theme="@style/MySwitch" />
+                        </LinearLayout>
+
+                        <View
+                            style="@style/LightDivider"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:background="#EDF2F5" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/_20sdp"
+                            android:paddingTop="@dimen/_16sdp"
+                            android:paddingEnd="@dimen/_20sdp"
+                            android:paddingBottom="@dimen/_16sdp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.5"
+                                android:text="@string/new_cafe"
+                                android:textColor="@color/textLightGray"
+                                android:textSize="13sp"
+                                app:fontFamily="@font/poppins" />
+
+                            <Switch
+                                android:id="@+id/newCafes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:theme="@style/MySwitch" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

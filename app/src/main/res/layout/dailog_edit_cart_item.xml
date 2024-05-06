@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.q8intouch.ecovve.ui.cart.ShopCartItemViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="@dimen/_10sdp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/first"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="ltr">
+
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_160sdp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/imagedrop2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:riv_corner_radius_top_left="15dp"
+                        app:riv_corner_radius_top_right="15dp" />
+
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="0dp" -->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--app:layout_constraintTop_toTopOf="parent">-->
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/price_blu_side"
+                        android:backgroundTint="@color/colorPrimary"
+                        app:layout_constraintBottom_toBottomOf="@+id/txtItemPrice"
+                        app:layout_constraintEnd_toEndOf="@+id/kma"
+                        app:layout_constraintHorizontal_bias="0.50"
+                        app:layout_constraintStart_toStartOf="@+id/txtItemPrice"
+                        app:layout_constraintTop_toTopOf="@+id/txtItemPrice" />
+
+                    <TextView
+                        android:id="@+id/kma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:padding="@dimen/_10sdp"
+                        android:text="kwd"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/poppins_bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtItemPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:padding="@dimen/_8sdp"
+                        android:text="500       "
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/poppins_bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/txtItemName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="@{viewModel.data.name}"
+                        android:textColor="@color/textDarkGray"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="@string/the_cofebreak" />
+
+
+                    <TextView
+                        android:id="@+id/lblQuantity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_30sdp"
+                        android:text="@string/quantity"
+                        android:textColor="@color/textDarkGray"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtItemName" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_24sdp"
+                        android:text="@string/total"
+                        android:textColor="@color/textDarkGray"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/lblQuantity"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+                    <Button
+                        android:id="@+id/btnSaveCartItem"
+                        android:layout_width="125dp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_24sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:text="@string/save_edit"
+                        android:textAllCaps="false"
+                        android:textColor="#ffff"
+                        android:textSize="16sp"
+                        app:cornerRadius="@dimen/_8sdp"
+                        app:fontFamily="@font/nunito_bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtTotal" />
+
+                    <TextView
+                        android:id="@+id/txtTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="29dp"
+                        android:textColor="#FF1515"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/poppins_bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+                        app:layout_constraintStart_toStartOf="@+id/guideline5"
+                        app:layout_constraintTop_toTopOf="@+id/textView2"
+                        app:totalkd="@{viewModel.total}"
+                        tools:text="100.00 kd" />
+
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/quantitiy_bg"
+                        app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+                        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+                        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+                        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_4sdp"
+                        app:layout_constraintBottom_toBottomOf="@+id/lblQuantity"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/lblQuantity"
+                        app:layout_constraintTop_toTopOf="@+id/lblQuantity">
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/banMinusQuantity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/textWhite"
+                            android:src="@drawable/ic_minus"
+                            app:borderWidth="0dp"
+                            app:elevation="0dp"
+                            app:fabCustomSize="35dp"
+                            app:maxImageSize="14dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_16sdp"
+                            android:layout_marginEnd="@dimen/_16sdp"
+                            android:textColor="@color/textDarkGray"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/nunito_bold"
+                            app:quantityUnits="@{viewModel.quantity}"
+                            tools:text="@string/units2" />
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/banPlusQuantity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:src="@drawable/ic_plus"
+                            app:borderWidth="0dp"
+                            app:elevation="0dp"
+                            app:fabCustomSize="35dp"
+                            app:maxImageSize="14dp" />
+                        <!--<androidx.appcompat.widget.AppCompatButton-->
+                        <!--android:id="@+id/banPlusQuantity"-->
+                        <!--style="@style/Widget.AppCompat.Button.Borderless"-->
+                        <!--android:layout_width="35dp"-->
+                        <!--android:layout_height="35dp"-->
+                        <!--android:layout_marginTop="0.4dp"-->
+                        <!--android:background="@drawable/plus_button_state" />-->
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.35" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </FrameLayout>
+
+</layout>

@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="Autofill">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.q8intouch.ecovve.ui.social.ChatBotViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ScrollViewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_app"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/_20sdp">
+
+            <include
+                layout="@layout/rowchatbot_me_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                app:title="@{String.format(@string/get_start)}" />
+
+
+            <include
+                layout="@layout/rowchatbot_me_command"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:title="@{String.format(@string/send_location)}" />
+
+
+            <include
+                layout="@layout/rowchatbot_me_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_20sdp" />
+
+            <include
+                layout="@layout/rowchatbot_wantdrink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_16sdp" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/outlets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/selectOutlet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:elevation="3dp"
+                android:textColor="@color/textWhite"
+                android:textSize="13sp"
+                android:visibility="gone"
+                app:chipBackgroundColor="@color/colorPrimary"
+                app:chipCornerRadius="@dimen/_20sdp"
+                app:chipEndPadding="@dimen/_16sdp"
+                app:chipMinHeight="42dp"
+                app:chipStartPadding="@dimen/_16sdp"
+                app:fontFamily="@font/poppins" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <include
+                layout="@layout/rowchatbot_catagory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:visibility="gone" />
+
+
+            <include
+                layout="@layout/rowchatbot_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:visibility="gone" />
+
+            <include
+                layout="@layout/rowchatbot_bot_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:visibility="gone"
+                app:title="@{`How many do you want?`}" />
+
+            <include
+                layout="@layout/rowchatbot_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:visibility="gone" />
+
+            <include
+                layout="@layout/rowchatbot_me_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:visibility="gone"
+                app:title="@{`Select 5`}" />
+
+            <include
+                layout="@layout/rowchatbot_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:visibility="gone" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCartItems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_6sdp"
+                app:shopsCartsAdapter="@{viewModel.cart}"></androidx.recyclerview.widget.RecyclerView>
+
+
+            <include
+                layout="@layout/rowchatbot_me_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:visibility="gone"
+                app:title="@{`View cart`}" />
+
+            <include
+                layout="@layout/rowchatbot_cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:id="@+id/layoutFinishOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:background="@color/textWhite">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chpFinishOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:text="@string/complete_order"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="13sp"
+                    app:chipBackgroundColor="#00ffffff"
+                    app:chipCornerRadius="@dimen/_20sdp"
+                    app:chipEndPadding="@dimen/_16sdp"
+                    app:chipMinHeight="42dp"
+                    app:chipStartPadding="@dimen/_16sdp"
+                    app:chipStrokeColor="@color/colorPrimary"
+                    app:chipStrokeWidth="1dp"
+                    app:fontFamily="@font/poppins" />
+            </LinearLayout>
+
+            <include
+                android:id="@+id/promptFinishOrder"
+                layout="@layout/rowchatbot_me_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:visibility="gone"
+                app:title="@{String.format(@string/complete_order)}" />
+
+
+            <LinearLayout
+                android:id="@+id/order_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:gravity="end"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:background="@color/textWhite">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".2" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/materialCardView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        app:cardElevation="3dp"
+                        app:cardPreventCornerOverlap="false"
+                        app:cardUseCompatPadding="true">
+
+
+                        <LinearLayout
+                            android:layout_width="240dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/delivery"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/delivery_order_type"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="14sp" />
+
+                            <View
+
+                                style="@style/horizontalDivider"
+                                android:layout_height="1dp" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/pickup"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/pick_up"
+                                android:textAllCaps="false"
+                                android:textColor="#A1A1A1"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:src="@drawable/ic_chatbot" />
+            </LinearLayout>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnSelectOrderTime2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_24sdp"
+                android:visibility="gone"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_4sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rbPickUp">
+
+                <Spinner
+                    android:id="@+id/txtMenuItem2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_24sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:layout_marginBottom="@dimen/_16sdp"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/arrow_right"
+                    android:dropDownWidth="match_parent"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/textGray"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <include
+                android:id="@+id/choose_time_prmp"
+                layout="@layout/rowchatbot_bot_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:visibility="gone"
+                app:title="@{String.format(@string/please_sellect_a_time)}" />
+
+            <include
+                android:id="@+id/chooseTimeLayout"
+                layout="@layout/rowchatbot_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/selectedTime"
+                layout="@layout/rowchatbot_me_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:visibility="gone"
+                app:title="@{`Select 10:10`}" />
+
+
+            <include
+                layout="@layout/rowchatbot_me_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:visibility="gone"
+                app:title="@{String.format(@string/delivery_order_type)}" />
+
+            <include
+                android:id="@+id/promptAddress"
+                layout="@layout/rowchatbot_bot_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:visibility="gone"
+                app:title="@{String.format(@string/select_your_address)}" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/AddressList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/newAddress"
+                layout="@layout/rowchatbot_me_command"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:visibility="gone"
+                app:title="@{`New Address`}" />
+
+            <include
+                layout="@layout/rowchatbot_me_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:visibility="gone"
+                app:title="@{`Home`}" />
+
+            <include
+                android:id="@+id/prompt_payment"
+                layout="@layout/rowchatbot_bot_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:visibility="gone"
+                app:title="@{String.format(@string/select_payment_method)}" />
+
+            <LinearLayout
+                android:id="@+id/paymentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_card_selector"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/textTitlePrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_2sdp"
+                    android:text="@string/payment"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_card_selector"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/RatringGroups"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/btnVisa"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:background="@drawable/payment_selection"
+                                android:orientation="vertical"
+                                android:paddingStart="@dimen/_2sdp"
+                                android:paddingEnd="@dimen/_2sdp">
+
+                                <ImageView
+                                    android:id="@+id/Visa"
+                                    style="@style/Widget.AppCompat.Button.Borderless"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_45sdp"
+                                    android:scaleType="center"
+                                    android:src="@drawable/logo_visa"
+                                    android:text="@string/wichlist"
+                                    android:textColor="@color/span"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/txtVis"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:paddingTop="@dimen/_3sdp"
+                                android:text="@string/visa_card"
+                                android:textColor="@color/textGray"
+                                android:textSize="@dimen/_10sdp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/recommendedGroups"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/btnMaster"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:background="@drawable/payment_selection"
+                                android:orientation="vertical"
+                                android:paddingStart="@dimen/_2sdp"
+                                android:paddingEnd="@dimen/_2sdp">
+
+                                <ImageView
+                                    android:id="@+id/Master"
+                                    style="@style/Widget.AppCompat.Button.Borderless"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_45sdp"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:scaleType="center"
+                                    android:src="@drawable/logo_master_card"
+                                    android:textColor="@color/span"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/txtMaster"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:paddingTop="@dimen/_3sdp"
+                                android:text="@string/master_card"
+                                android:textSize="@dimen/_10sdp" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/FastGroups"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/btnKnet"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:background="@drawable/payment_selection"
+                                android:orientation="vertical"
+                                android:paddingStart="@dimen/_2sdp"
+                                android:paddingEnd="@dimen/_2sdp">
+
+                                <ImageView
+                                    android:id="@+id/Knet"
+                                    style="@style/Widget.AppCompat.Button.Borderless"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_45sdp"
+                                    android:scaleType="center"
+                                    android:src="@drawable/logo_knet"
+                                    android:text="@string/wichlist"
+                                    android:textColor="@color/span"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/txtKnet"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:paddingTop="@dimen/_3sdp"
+                                android:text="@string/k_net"
+                                android:textSize="@dimen/_10sdp" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/MinGroups"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/btnCash"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:background="@drawable/payment_selection"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/Cash"
+                                    style="@style/Widget.AppCompat.Button.Borderless"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_45sdp"
+                                    android:scaleType="center"
+                                    android:src="@drawable/cash"
+                                    android:textColor="@color/span"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/txtCash"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:paddingTop="@dimen/_3sdp"
+                                android:text="@string/cash"
+                                android:textSize="@dimen/_10sdp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/GrayED"
+                    android:padding="@dimen/_2sdp" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_2sdp">
+
+                    <TextView
+                        style="@style/textTitlePrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:gravity="center_vertical"
+                        android:text="@string/sub_total"
+                        android:textColor="@color/textLightGray"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtSubTotal"
+                        style="@style/textTitlePrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:gravity="center_vertical"
+                        android:text="00kwd"
+                        android:textColor="@color/textLightGray"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_2sdp">
+
+                    <TextView
+                        style="@style/textTitlePrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:gravity="center_vertical"
+                        android:text="@string/delivery"
+                        android:textColor="@color/textLightGray"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtDeliveryFee"
+                        style="@style/textTitlePrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:gravity="center_vertical"
+                        android:text="10kwd"
+                        android:textColor="@color/textLightGray"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_2sdp">
+
+                    <TextView
+                        style="@style/textTitlePrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:gravity="center_vertical"
+                        android:text="@string/free_credit_value"
+                        android:textColor="@color/textLightGray"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtValueDiscount"
+                        style="@style/textTitlePrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:gravity="center_vertical"
+                        android:text="-0kwd"
+                        android:textColor="@color/danger"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_2sdp">
+
+                    <TextView
+                        style="@style/textTitlePrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:gravity="center_vertical"
+                        android:text="@string/total"
+                        android:textColor="@color/textLightGray"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtTotalPayment"
+                        style="@style/textTitlePrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:gravity="center_vertical"
+                        android:text="00kwd"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+                <Button
+                    android:id="@+id/btnCheckout"
+                    style="@style/bigButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_46sdp"
+                    android:text="@string/checkout"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+            <include
+                layout="@layout/rowchatbot_me_command_no_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:visibility="gone"
+                app:title="@{`Edit Payment Methods`}" />
+
+            <include
+                layout="@layout/rowchatbot_me_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:visibility="gone"
+                app:title="@{`Visa Card`}" />
+
+            <include
+                android:id="@+id/order_completed"
+                layout="@layout/rowchatbot_bot_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:visibility="gone"
+                app:title="@{String.format(@string/your_order_is_completed)}" />
+
+            <include
+                layout="@layout/rowchatbot_me_command_no_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:visibility="gone"
+                app:title="@{`Track your order`}" />
+
+            <LinearLayout
+                android:id="@+id/aferFinish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/textWhite"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_8sdp"
+                android:visibility="gone">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_4sdp"
+                        android:layout_gravity="center"
+                        app:cardBackgroundColor="#C8C8C8">
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/startAgain"
+                    style="@style/Base.Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|fill_vertical"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingTop="@dimen/_16sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:paddingBottom="@dimen/_16sdp"
+                    android:text="@string/start_again"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textHalfDarkGray"
+                    android:textSize="15sp"
+                    app:fontFamily="@font/poppins" />
+
+                <View
+                    style="@style/horizontalDivider"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:background="#A1A1A1" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    style="@style/Base.Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|fill_vertical"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingTop="@dimen/_16sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:paddingBottom="@dimen/_16sdp"
+                    android:text="@string/view_cart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textHalfDarkGray"
+                    android:textSize="15sp"
+                    android:visibility="gone"
+                    app:fontFamily="@font/poppins" />
+
+                <View
+                    style="@style/horizontalDivider"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:background="#A1A1A1" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    style="@style/Base.Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|fill_vertical"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingTop="@dimen/_16sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:paddingBottom="@dimen/_16sdp"
+                    android:text="Checkout"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textHalfDarkGray"
+                    android:textSize="15sp"
+                    android:visibility="gone"
+                    app:fontFamily="@font/poppins" />
+
+                <View
+                    style="@style/horizontalDivider"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:background="#A1A1A1" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    style="@style/Base.Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|fill_vertical"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingTop="@dimen/_16sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:paddingBottom="@dimen/_16sdp"
+                    android:text="@string/find_other_cafes"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textHalfDarkGray"
+                    android:textSize="15sp"
+                    android:visibility="gone"
+                    app:fontFamily="@font/poppins" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

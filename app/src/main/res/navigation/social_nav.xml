@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/social_nav.xml"
+    app:startDestination="@id/chatBotFragment">
+
+    <fragment
+        android:id="@+id/chatBotFragment"
+        android:name="com.q8intouch.ecovve.ui.social.ChatBotFragment"
+        android:label="ChatBot" />
+</navigation>

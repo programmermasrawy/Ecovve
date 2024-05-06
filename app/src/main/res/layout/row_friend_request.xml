@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    tools:background="@color/textWhite">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgContactImage"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:src="@drawable/profile_image"
+        app:riv_corner_radius="64dp" />
+
+    <TextView
+        android:id="@+id/txtContactName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_weight="1"
+        android:text=""
+        android:textColor="@color/textMoreDarkGray"
+        app:fontFamily="@font/nunito_semibold"
+        app:layout_constraintStart_toEndOf="@+id/imgContactImage"
+        app:layout_constraintTop_toTopOf="@+id/imgContactImage" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAccept"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:backgroundTint="#32f5900e"
+        android:minWidth="@dimen/_45sdp"
+        android:minHeight="0dp"
+        android:paddingStart="@dimen/_16sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_16sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:text="@string/accept"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12sp"
+        app:cornerRadius="@dimen/_45sdp"
+        app:fontFamily="@font/poppins_medium" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDelete"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:backgroundTint="#32ff1515"
+        android:minWidth="@dimen/_45sdp"
+        android:minHeight="0dp"
+        android:paddingStart="@dimen/_16sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_16sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:text="@string/delete"
+        android:textAllCaps="false"
+        android:textColor="@color/danger"
+        android:textSize="12sp"
+        app:cornerRadius="@dimen/_45sdp"
+        app:fontFamily="@font/poppins_medium" />
+</LinearLayout>

@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.q8intouch.ecovve.ui.home.HomeFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_cartFragment"
+            app:destination="@id/cartFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_left_out"
+            app:popEnterAnim="@anim/trans_left_in"
+            app:popExitAnim="@anim/trans_left_out" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_left_out"
+            app:popEnterAnim="@anim/trans_left_in"
+            app:popExitAnim="@anim/trans_left_out" />
+        <action
+            android:id="@+id/action_homeFragment_to_offersFragment"
+            app:destination="@id/offersFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_left_out"
+            app:popEnterAnim="@anim/trans_left_in"
+            app:popExitAnim="@anim/trans_left_out" />
+        <action
+            android:id="@+id/action_homeFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_left_out"
+            app:popEnterAnim="@anim/trans_left_in"
+            app:popExitAnim="@anim/trans_left_out" />
+        <action
+            android:id="@+id/action_homeFragment_to_gift_card"
+            app:destination="@id/giftCardFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_left_out"
+            app:popEnterAnim="@anim/trans_left_in"
+            app:popExitAnim="@anim/trans_left_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SearchMapFragmant"
+        android:name="com.q8intouch.ecovve.ui.maps.search.SearchMapFragment"
+        android:label="Search Map">
+        <action
+            android:id="@+id/action_searchFragment_to_shopInfoFragment"
+            app:destination="@id/shopInfoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/couponFragment"
+        android:name="com.q8intouch.ecovve.ui.cart.coupon.CouponFragment"
+        android:label="@string/choose_coupon" />
+    <fragment
+        android:id="@+id/PaymentFragment"
+        android:name="com.q8intouch.ecovve.ui.cart.payment_page.PaymentFragment"
+        android:label="@string/payment"
+        app:enterAnim="@anim/trans_left_in"
+        app:exitAnim="@anim/trans_left_out"
+        app:popEnterAnim="@anim/trans_left_in"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" >
+        <action
+            android:id="@+id/action_PaymentFragment_to_orderCompleteFragment"
+            app:destination="@id/orderCompleteFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/cartFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.q8intouch.ecovve.ui.cart.CartFragment"
+        android:label="@string/cart"
+        app:popEnterAnim="@anim/trans_left_in"
+        app:popExitAnim="@anim/trans_left_out">
+        <action
+            android:id="@+id/action_cartFragment_to_orderTypeFragment"
+            app:destination="@id/orderTypeFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_left_out"
+            app:popEnterAnim="@anim/trans_left_in"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/OrderCheckoutFragment"
+        android:name="com.q8intouch.ecovve.ui.order_checkout.OrderCheckoutFragment"
+        android:label="@string/checkout"
+        app:popEnterAnim="@anim/trans_left_in"
+        app:popExitAnim="@anim/trans_left_out" >
+
+        <action
+            android:id="@+id/action_OrderCheckoutFragment_to_orderCompleteFragment"
+            app:destination="@id/orderCompleteFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/cartFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/GiftOrCoupn"
+        android:name="com.q8intouch.ecovve.ui.cart.giftOrCoupon.GiftOrCouponFragment"
+        android:label="@string/giftOrCard"
+        app:popEnterAnim="@anim/trans_left_in"
+        app:popExitAnim="@anim/trans_left_out">
+        <action
+            android:id="@+id/action_orderTypeFragment_to_paymentMethodSelectFragment"
+            app:destination="@id/paymentMethodSelectFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popEnterAnim="@anim/trans_left_in"
+            app:popExitAnim="@anim/trans_left_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/SelectGiftCardOrderFragment"
+        android:name="com.q8intouch.ecovve.ui.cart.GiftCardOrderFragment"
+        android:label="@string/choose_your_gift"
+        app:popEnterAnim="@anim/trans_left_in"
+        app:popExitAnim="@anim/trans_left_out">
+
+        <action
+            android:id="@+id/action_orderTypeFragment_to_paymentMethodSelectFragment"
+            app:destination="@id/paymentMethodSelectFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popEnterAnim="@anim/trans_left_in"
+            app:popExitAnim="@anim/trans_left_out" />
+
+        <action
+            android:id="@+id/action_orderTypeFragment_to_PaymentFragment"
+            app:destination="@id/PaymentFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popEnterAnim="@anim/trans_left_in"
+            app:popExitAnim="@anim/trans_left_out" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/orderTypeFragment"
+        android:name="com.q8intouch.ecovve.ui.cart.order_type.OrderTypeFragment"
+        android:label="@string/order_typet"
+        app:popEnterAnim="@anim/trans_left_in"
+        app:popExitAnim="@anim/trans_left_out">
+        <action
+            android:id="@+id/action_orderTypeFragment_to_paymentMethodSelectFragment"
+            app:destination="@id/paymentMethodSelectFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popEnterAnim="@anim/trans_left_in"
+            app:popExitAnim="@anim/trans_left_out" />
+
+        <action
+            android:id="@+id/action_order_to_PaymentFragment"
+            app:destination="@id/PaymentFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_orderTypeFragment_to_addAddressFragment"
+            app:destination="@id/addAddressFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentMethodSelectFragment"
+        android:name="com.q8intouch.ecovve.ui.cart.payment_method_select.PaymentMethodSelectFragment"
+        android:label="@string/checkout"
+        app:enterAnim="@anim/trans_left_in"
+        app:exitAnim="@anim/trans_left_out"
+        app:popEnterAnim="@anim/trans_left_in"
+        app:popExitAnim="@anim/trans_left_out">
+
+        <action
+            android:id="@+id/action_orderTypeFragment_to_PaymentFragment"
+            app:destination="@id/PaymentFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popEnterAnim="@anim/trans_left_in"
+            app:popExitAnim="@anim/trans_left_out" />
+
+
+        <action
+            android:id="@+id/action_paymentMethodSelectFragment_to_orderCompleteFragment"
+            app:destination="@id/orderCompleteFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_left_out"
+            app:popEnterAnim="@anim/trans_left_in"
+            app:popExitAnim="@anim/trans_left_out" />
+        <action
+            android:id="@+id/action_paymentMethodSelectFragment_to_paymentMethodEditFragment"
+            app:destination="@id/paymentMethodEditFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentMethodEditFragment"
+        android:name="com.q8intouch.ecovve.ui.cart.payment_method_edit.PaymentMethodEditFragment"
+        android:label="@string/payment_methods"
+        app:popEnterAnim="@anim/trans_left_in"
+        app:popExitAnim="@anim/trans_left_out" />
+    <fragment
+        android:id="@+id/orderCompleteFragment"
+        android:name="com.q8intouch.ecovve.ui.cart.order_complete.OrderCompleteFragment"
+        android:label="@string/complete_orders"
+        app:popEnterAnim="@anim/trans_left_in"
+        app:popExitAnim="@anim/trans_left_out"
+        tools:layout="@layout/fragment_order_complete">
+        <action
+            android:id="@+id/action_orderCompleteFragment_to_myOrdersFragment"
+            app:destination="@id/myOrdersFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/myOrdersFragment"
+        android:name="com.q8intouch.ecovve.ui.order.MyOrdersFragment"
+        android:label="@string/my_orders"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim">
+
+        <action
+            android:id="@+id/action_myOrdersFragment_to_orderDetailsFragment"
+            app:destination="@id/orderDetailsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetailsFragment"
+        android:name="com.q8intouch.ecovve.ui.order.order_details.OrderDetailsFragment"
+        android:label="@string/order_details">
+        <action
+            android:id="@+id/action_orderDetailsFragment_to_feedbackFragment"
+            app:destination="@id/feedbackFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.q8intouch.ecovve.ui.profile.ProfileFragment"
+        android:label="@string/profile">
+        <action
+            android:id="@+id/action_profileFragment_to_feedbackDetailFragment"
+            app:destination="@id/feedbackDetailFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_cartFragment"
+        app:destination="@id/cartFragment"
+        app:enterAnim="@anim/trans_left_in"
+        app:exitAnim="@anim/trans_left_out"
+        app:popEnterAnim="@anim/trans_left_in"
+        app:popExitAnim="@anim/trans_left_out" />
+    <fragment
+        android:id="@+id/socialFragment"
+        android:name="com.q8intouch.ecovve.ui.social.SocialFragment"
+        android:label="@string/live_chat"
+        tools:layout="@layout/fragment_social">
+        <action
+            android:id="@+id/action_socialFragment_to_addfriendsFragment"
+            app:destination="@id/addfriendsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_socialFragment_to_chatFragment"
+            app:destination="@id/chatFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.q8intouch.ecovve.ui.search.SearchFragment"
+        android:label="    ">
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment"
+            app:enterAnim="@anim/trans_left_in"
+            app:exitAnim="@anim/trans_left_out"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/trans_left_in"
+            app:popExitAnim="@anim/trans_left_out" />
+        <action
+            android:id="@+id/action_searchFragment_to_menuCategoryFragment"
+            app:destination="@id/menuCategoryFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_searchFragment_to_shopInfoFragment"
+            app:destination="@id/shopInfoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_searchFragment_to_filterFragment"
+            app:defaultNavHost="true"
+            app:destination="@id/filterFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@+id/searchFragment"
+            app:popUpToInclusive="true"/>
+        <!--app:popUpToInclusive="true"-->
+    </fragment>
+    <fragment
+        android:id="@+id/findFriendsFragment"
+        android:name="com.q8intouch.ecovve.ui.social.add_friends.FindFriendsFragment"
+        android:label="@string/find_friends" />
+    <fragment
+        android:id="@+id/addfriendsFragment"
+        android:name="com.q8intouch.ecovve.ui.social.add_friends.AddfriendsFragment"
+        android:label="@string/find_friends"
+        tools:layout="@layout/fragment_addfriends">
+        <action
+            android:id="@+id/action_addfriendsFragment_to_findFriendsFragment"
+            app:destination="@id/findFriendsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/shopInfoFragment"
+        android:name="com.q8intouch.ecovve.ui.shop_info.ShopInfoFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_shopInfoFragment_to_menuCategoryFragment"
+            app:destination="@id/menuCategoryFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_profileFragment"
+        app:destination="@id/profileFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    <fragment
+        android:id="@+id/topNewShopsFragment"
+        android:name="com.q8intouch.ecovve.ui.top_new_shops.TopNewShopsFragment"
+        android:label="@string/top_cafes">
+        <action
+            android:id="@+id/action_topNewShopsFragment_to_shopInfoFragment"
+            app:destination="@id/shopInfoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuCategoryFragment"
+        android:name="com.q8intouch.ecovve.ui.shop_info.MenuCategoryFragment"
+        android:label="                                                         ">
+        <argument
+            android:name="amount"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.q8intouch.ecovve.ui.social.chat.ChatFragment"
+        android:label="Live Chat" />
+    <activity
+        android:id="@+id/social_activity"
+        android:name="com.q8intouch.ecovve.ui.social.SocialActivity"
+        android:label="@string/social"
+        tools:layout="@layout/activity_social" />
+    <action
+        android:id="@+id/action_global_social_activity"
+        app:destination="@+id/social_activity"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    <action
+        android:id="@+id/action_global_addfriendsFragment"
+        app:destination="@id/addfriendsFragment" />
+    <activity
+        android:id="@+id/settingsActivity"
+        android:name="com.q8intouch.ecovve.ui.settings.SettingsActivity"
+        android:label="@string/settings" />
+    <action
+        android:id="@+id/action_global_settingsActivity"
+        app:destination="@id/settingsActivity"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="com.q8intouch.ecovve.ui.search.filter.FilterFragment"
+        android:label="@string/filter" />
+    <fragment
+        android:id="@+id/feedbackFragment"
+        android:name="com.q8intouch.ecovve.ui.order.order_feedback.FeedbackFragment"
+        android:label="@string/feedback" />
+    <fragment
+        android:id="@+id/feedbackDetailFragment"
+        android:name="com.q8intouch.ecovve.ui.profile.feedback_detail.FeedbackDetailFragment"
+        android:label="@string/feed_details" />
+
+    <fragment
+        android:id="@+id/OfferItemsFragment"
+        android:name="com.q8intouch.ecovve.ui.offers.OfferItemsFragment"
+        android:label="@string/offers"
+        tools:layout="@layout/offer_items_fragment" />
+    <fragment
+        android:id="@+id/ContactUsFragment"
+        android:name="com.q8intouch.ecovve.ui.contact.ContactUsFragment"
+        android:label="@string/contact" />
+    <fragment
+        android:id="@+id/offersFragment"
+        android:name="com.q8intouch.ecovve.ui.offers.OffersFragment"
+        android:label="@string/offers"
+        app:launchSingleTop="true">
+        <action
+            android:id="@+id/action_offersFragment_OfferItemsFragment"
+            app:destination="@id/OfferItemsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.q8intouch.ecovve.notification.NotificationFragment"
+        android:label="@string/notifications"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/giftCardFragment"
+        android:name="com.q8intouch.ecovve.ui.gift.GiftCardFragment"
+        android:label="@string/buy_gift_card"
+        tools:layout="@layout/gift_card_fragment" />
+
+    <fragment
+        android:id="@+id/buyGiftCardFragment"
+        android:name="com.q8intouch.ecovve.ui.gift.buy_gift.BuyGiftCard"
+        android:label="@string/buy_gift_card_"
+        tools:layout="@layout/gift_card_fragment" />
+
+    <fragment
+        android:id="@+id/SelectGiftCardFragment"
+        android:name="com.q8intouch.ecovve.ui.gift.gift_card_payment.GiftCardSecletMethod"
+        tools:layout="@layout/gift_card_fragment" />
+
+    <fragment
+        android:id="@+id/NavNewCafes"
+        android:name="com.q8intouch.ecovve.ui.top_new_shops.NavNewCafes"
+        android:label="@string/new_cafe"
+        tools:layout="@layout/nav_new_cafes_fragment">
+        <action
+            android:id="@+id/action_NavNewCafes_to_shopInfoFragment"
+            app:destination="@id/shopInfoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <activity
+        android:id="@+id/mapsAdressActivity"
+        android:name="com.q8intouch.ecovve.ui.maps.MapsAddressActivity"
+        android:label="@string/add_new_address" />
+    <fragment
+        android:id="@+id/addAddressFragment"
+        android:name="com.q8intouch.ecovve.ui.cart.add_address.AddAddressFragment"
+        android:label="@string/add_new_address">
+        <action
+            android:id="@+id/action_addAddressFragment_to_mapsAdressActivity"
+            app:destination="@id/mapsAdressActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/messagesFragment"
+        android:name="com.q8intouch.ecovve.ui.social.messages.MessagesFragment"
+
+        tools:layout="@layout/fragment_messages">
+        <action
+            android:id="@+id/action_messagesFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_chatFragment"
+        app:destination="@id/chatFragment" />
+
+    <fragment
+        android:id="@+id/wishListFragment"
+        android:name="com.q8intouch.ecovve.ui.wishlist.WishListFragment"
+        android:label="@string/favorites"
+        tools:layout="@layout/wish_list_fragment" />
+    <fragment
+        android:id="@+id/Program4UFragment"
+        android:name="com.q8intouch.ecovve.ui.program4.Program4UFragment"
+        android:label="                    "
+        tools:layout="@layout/program4_u_fragment" />
+
+    <fragment
+        android:id="@+id/navInfo"
+        android:name="com.q8intouch.ecovve.ui.program4.navInfo"
+        android:label="@string/faq"
+        tools:layout="@layout/fragment_nav_info" />
+
+</navigation>

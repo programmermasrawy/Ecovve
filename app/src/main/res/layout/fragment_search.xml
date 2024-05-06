@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="Autofill">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.q8intouch.ecovve.ui.search.SearchViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:background="@color/background_app">
+
+            <TextView
+                android:id="@+id/no_items"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_13sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:background="@color/background_app">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/shopInfoTabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:background="@color/background_app"
+                    app:tabBackground="@drawable/tab_selector_reg"
+                    app:tabGravity="fill"
+                    app:tabIndicatorColor="@android:color/transparent"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabMode="scrollable"
+                    app:tabPaddingBottom="@dimen/_8sdp"
+                    app:tabPaddingEnd="@dimen/_8sdp"
+                    app:tabPaddingStart="@dimen/_8sdp"
+                    app:tabPaddingTop="@dimen/_8sdp"
+                    app:tabSelectedTextColor="@color/textWhite"
+                    app:tabTextAppearance="@style/tabTextFont"
+                    app:tabTextColor="@color/textHalfDarkGray" />
+
+                <TextView
+                    android:id="@+id/txtNum"
+                    style="@style/textTitlePrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:textColor="@color/browser_actions_title_color"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+
+                    />
+
+                <com.q8intouch.ecovve.util.NonSwipeableViewPager
+                    android:id="@+id/shopInfoPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="@dimen/_8sdp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

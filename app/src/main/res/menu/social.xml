@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/menuSearch"
+        android:icon="@drawable/ic_action_search"
+        android:title="@string/action_settings"
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction" />
+    <item
+        android:id="@+id/menuViewProfile"
+        android:title="@string/view_profile"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menuProfileSettings"
+        android:title="@string/profile_settings"
+        app:showAsAction="never" />
+    <!--<item-->
+        <!--android:id="@+id/menuLogout"-->
+        <!--android:title="@string/logout"-->
+        <!--app:showAsAction="never" />-->
+</menu>

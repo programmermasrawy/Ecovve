@@ -1,0 +1,226 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.Register.RegisterFragment"
+    tools:ignore="Autofill"
+
+    >
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.q8intouch.ecovve.ui.login.register.RegisterViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:background="@color/textWhite"
+            tools:context=".ui.Register.RegisterFragment">
+
+            <ImageView
+                android:id="@+id/bg_curved"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_currved_bg"
+                app:layout_constraintBottom_toBottomOf="@+id/guideline12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card"
+                style="@style/InputCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_24sdp"
+                app:cardElevation="2dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/txtSubtitle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/etFullName"
+                        style="@style/InputText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/user"
+                        android:drawablePadding="@dimen/_20sdp"
+                        android:hint="@string/full_name"
+                        android:inputType="textPersonName"
+                        android:padding="@dimen/_20sdp"
+                        android:text="@={viewModel.fullName}" />
+
+                    <View style="@style/horizontalDivider" />
+
+                    <EditText
+                        android:id="@+id/etEmail"
+                        style="@style/InputText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/envelope"
+                        android:drawablePadding="@dimen/_20sdp"
+                        android:hint="@string/email_address"
+                        android:inputType="textEmailAddress"
+                        android:padding="@dimen/_20sdp"
+                        android:text="@={viewModel.email}"
+                        android:textSize="14sp" />
+
+                    <View style="@style/horizontalDivider" />
+
+                    <EditText
+                        android:id="@+id/etPhone"
+                        style="@style/InputText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/phone_handset"
+                        android:drawablePadding="@dimen/_20sdp"
+                        android:hint="@string/phone_number"
+                        android:inputType="phone"
+                        android:maxLength="8"
+                        android:padding="@dimen/_20sdp"
+                        android:text="@={viewModel.phone}" />
+
+                    <View style="@style/horizontalDivider" />
+
+                    <EditText
+                        android:id="@+id/etPassword"
+                        style="@style/InputText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/lock"
+                        android:drawablePadding="@dimen/_20sdp"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:padding="@dimen/_20sdp"
+                        android:text="@={viewModel.password}" />
+
+                    <View style="@style/horizontalDivider" />
+
+                    <EditText
+                        android:id="@+id/etPasswordconfirm"
+                        style="@style/InputText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/lock"
+                        android:drawablePadding="@dimen/_20sdp"
+                        android:hint="@string/confirm_password"
+                        android:inputType="textPassword"
+                        android:padding="@dimen/_20sdp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="38dp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:text="@string/sign_up"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/nunito_bold"
+
+                app:layout_constraintBottom_toTopOf="@+id/txtSubtitle"
+                app:layout_constraintEnd_toEndOf="@+id/txtSubtitle"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/txtSubtitle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/txtSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:text="@string/create_a_new_account"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRegister"
+                style="@style/bigButton"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:elevation="3dp"
+                android:text="@string/sign_up"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/card" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9" />
+
+            <LinearLayout
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnRegister">
+
+                <TextView
+                    android:id="@+id/txt_no_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:text="@string/already_have_account"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/spanCreateAccount"
+                    style="@style/smallSpan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:text="@string/sign_in_span"
+                    android:textColor="@color/span" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.62" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

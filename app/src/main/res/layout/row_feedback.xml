@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="title"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:background="@color/textWhite">
+
+        <View
+            android:id="@+id/view5"
+            style="@style/LightDivider"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:background="#EDF2F5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblOrderTime" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_20sdp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.5"
+                android:text="@{title}"
+                android:textColor="@color/textLightGray"
+                android:textSize="13sp"
+                app:fontFamily="@font/poppins"
+                tools:text="@string/quality" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@+id/txtReviewUserName"
+                app:layout_constraintTop_toBottomOf="@+id/txtReviewUserName">
+
+
+                <RatingBar
+                    android:id="@+id/rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:progress="50"
+                    android:progressDrawable="@drawable/my_rating_display"
+                    android:scaleX="1.0"
+                    android:scaleY="1.1"
+                    android:stepSize="1" />
+
+
+                <!--<ImageView-->
+                <!--android:id="@+id/imgRateStar1"-->
+                <!--android:layout_width="@dimen/_20sdp"-->
+                <!--android:layout_height="@dimen/_20sdp"-->
+                <!--android:layout_marginStart="1dp"-->
+                <!--android:layout_marginEnd="1dp"-->
+                <!--android:src="@drawable/star_empty" />-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/imgRateStar3"-->
+                <!--android:layout_width="@dimen/_20sdp"-->
+                <!--android:layout_height="@dimen/_20sdp"-->
+                <!--android:layout_marginStart="1dp"-->
+                <!--android:layout_marginEnd="1dp"-->
+                <!--android:src="@drawable/star_empty" />-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/imgRateStar4"-->
+                <!--android:layout_width="@dimen/_20sdp"-->
+                <!--android:layout_height="@dimen/_20sdp"-->
+                <!--android:layout_marginStart="1dp"-->
+                <!--android:layout_marginEnd="1dp"-->
+                <!--android:src="@drawable/star_empty" />-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/imgRateStar2"-->
+                <!--android:layout_width="@dimen/_20sdp"-->
+                <!--android:layout_height="@dimen/_20sdp"-->
+                <!--android:layout_marginStart="1dp"-->
+                <!--android:layout_marginEnd="1dp"-->
+                <!--android:src="@drawable/star_empty" />-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/imgRateStar5"-->
+                <!--android:layout_width="@dimen/_20sdp"-->
+                <!--android:layout_height="@dimen/_20sdp"-->
+                <!--android:layout_marginStart="1dp"-->
+                <!--android:layout_marginEnd="1dp"-->
+                <!--android:src="@drawable/star_empty" />-->
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

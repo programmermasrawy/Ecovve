@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/homeFragment"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/myOrdersFragment"
+            android:icon="@drawable/solid_cart"
+            android:title="@string/my_orders" />
+        <item
+            android:id="@+id/offersFragment"
+            android:icon="@drawable/tag"
+            android:title="@string/offers" />
+        <item
+            android:id="@+id/notificationFragment"
+            android:icon="@drawable/notification"
+            android:title="@string/notifications" />
+        <item
+            android:id="@+id/topNewShopsFragment"
+            android:icon="@drawable/cafe"
+            android:title="@string/top_cafes" />
+        <item
+            android:id="@+id/NavNewCafes"
+            android:icon="@drawable/cafe"
+            android:title="@string/new_cafes" />
+        <item
+            android:id="@+id/socialFragment"
+            android:icon="@drawable/speech_bubble"
+            android:title="@string/live_chat" />
+
+        <item
+            android:id="@+id/giftCardFragment"
+            android:icon="@drawable/ic_gift_card"
+            android:title="@string/buy_gift_card" />
+
+        <item
+            android:id="@+id/Program4UFragment"
+            android:icon="@drawable/ic_gift_card"
+            android:title="@string/u4_program" />
+
+        <item
+            android:id="@+id/ContactUsFragment"
+            android:icon="@drawable/contact"
+            android:title="@string/contact" />
+
+    </group>
+
+    <item android:title="@string/more">
+        <menu>
+            <item
+                android:id="@+id/navInfo"
+                android:icon="@drawable/info"
+                android:title="@string/info" />
+
+            <!--<item-->
+            <!--android:id="@+id/navLogout"-->
+            <!--android:icon="@drawable/ic_menu_send"-->
+            <!--android:title="@string/signout" />-->
+        </menu>
+    </item>
+
+</menu>

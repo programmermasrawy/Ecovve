@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_600sdp"
+    android:layoutDirection="locale">
+
+    <!--<androidx.core.widget.NestedScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:fillViewport="true">-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_16sdp"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="3dp"
+            tools:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_16sdp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/area"
+                        android:textColor="@color/textHalfDarkGray"
+                        android:textSize="@dimen/_10sdp"
+                        app:fontFamily="@font/poppins" />
+
+                    <TextView
+                        android:id="@+id/txtArea"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="Radwa"
+                        android:textColor="@color/textMoreDarkGray"
+                        android:textSize="@dimen/_10sdp"
+                        app:fontFamily="@font/poppins" />
+                </LinearLayout>
+
+                <View
+                    style="@style/horizontalDivider"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginBottom="@dimen/_16sdp"
+                    android:background="@color/GrayA1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/status"
+                        android:textColor="@color/textHalfDarkGray"
+                        android:textSize="@dimen/_10sdp"
+                        app:fontFamily="@font/poppins" />
+
+                    <TextView
+                        android:id="@+id/txtStatus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/open"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/_10sdp"
+                        app:fontFamily="@font/poppins"
+
+                        />
+                </LinearLayout>
+
+                <View
+                    style="@style/horizontalDivider"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginBottom="@dimen/_16sdp"
+                    android:background="@color/GrayA1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/categor"
+                        android:textColor="@color/textHalfDarkGray"
+                        android:textSize="@dimen/_10sdp"
+                        app:fontFamily="@font/poppins" />
+
+                    <TextView
+                        android:id="@+id/txtCuisines"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="Cafe,Pizza"
+                        android:textColor="@color/textMoreDarkGray"
+                        android:textSize="@dimen/_10sdp"
+                        app:fontFamily="@font/poppins" />
+                </LinearLayout>
+
+                <View
+                    style="@style/horizontalDivider"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginBottom="@dimen/_16sdp"
+                    android:background="@color/GrayA1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/opening_hours"
+                        android:textColor="@color/textHalfDarkGray"
+                        android:textSize="@dimen/_10sdp"
+                        app:fontFamily="@font/poppins" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/workingDays"/>
+                <View
+                    style="@style/horizontalDivider"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginBottom="@dimen/_16sdp"
+                    android:background="@color/GrayA1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/delivery_time"
+                        android:textColor="@color/textHalfDarkGray"
+                        android:textSize="@dimen/_10sdp"
+                        app:fontFamily="@font/poppins" />
+
+                    <TextView
+                        android:id="@+id/txtDeliveryTime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="40 Mins"
+                        android:textColor="@color/textMoreDarkGray"
+                        android:textSize="@dimen/_10sdp"
+                        app:fontFamily="@font/poppins" />
+                </LinearLayout>
+
+                <View
+                    style="@style/horizontalDivider"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginBottom="@dimen/_16sdp"
+                    android:background="@color/GrayA1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/minimum_order"
+                        android:textColor="@color/textHalfDarkGray"
+                        android:textSize="@dimen/_10sdp"
+                        app:fontFamily="@font/poppins" />
+
+                    <TextView
+                        android:id="@+id/txtMinimumOrder"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="KD 0.000"
+                        android:textColor="@color/textMoreDarkGray"
+                        android:textSize="@dimen/_10sdp"
+                        app:fontFamily="@font/poppins" />
+                </LinearLayout>
+
+                <View
+                    style="@style/horizontalDivider"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginBottom="@dimen/_16sdp"
+                    android:background="@color/GrayA1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/delivery_fee"
+                        android:textColor="@color/textHalfDarkGray"
+                        android:textSize="@dimen/_10sdp"
+                        app:fontFamily="@font/poppins" />
+
+                    <TextView
+                        android:id="@+id/txtDeliveryFee"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="KD 0.500"
+                        android:textColor="@color/textMoreDarkGray"
+                        android:textSize="@dimen/_10sdp"
+                        app:fontFamily="@font/poppins" />
+                </LinearLayout>
+
+                <View
+                    style="@style/horizontalDivider"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginBottom="@dimen/_16sdp"
+                    android:background="@color/GrayA1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/pre_order"
+                        android:textColor="@color/textHalfDarkGray"
+                        android:textSize="@dimen/_10sdp"
+                        app:fontFamily="@font/poppins" />
+
+                    <TextView
+                        android:id="@+id/txtPreOrder"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/yes"
+                        android:textColor="@color/textMoreDarkGray"
+                        android:textSize="@dimen/_10sdp"
+                        app:fontFamily="@font/poppins" />
+                </LinearLayout>
+
+                <View
+                    style="@style/horizontalDivider"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginBottom="@dimen/_16sdp"
+                    android:background="@color/GrayA1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/payment_options"
+                        android:textColor="@color/textHalfDarkGray"
+                        android:textSize="@dimen/_10sdp"
+                        app:fontFamily="@font/poppins" />
+
+                    <TextView
+                        android:id="@+id/txtPaymentOptions"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="@string/cash_master_card_visa_knet"
+                        android:textColor="@color/textMoreDarkGray"
+                        android:textSize="@dimen/_10sdp"
+                        app:fontFamily="@font/poppins" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</FrameLayout>
+

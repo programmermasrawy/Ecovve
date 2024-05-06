@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.q8intouch.ecovve.ui.maps.search.SearchMapViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="net.simplifiedcoding.locationsearchexample.MapsActivity">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card"
+                style="@style/InputCard"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:layout_marginEnd="@dimen/_24sdp"
+                app:cardCornerRadius="@dimen/_12sdp"
+                app:cardElevation="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <fragment
+                    android:id="@+id/place_autocomplete_fragment"
+                    android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/mapview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:apiKey="@string/google_maps_key"
+                android:clickable="true"
+                android:enabled="true" />
+            <!--<fragment xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--xmlns:map="http://schemas.android.com/apk/res-auto"-->
+            <!--xmlns:tools="http://schemas.android.com/tools"-->
+            <!--android:id="@+id/map"-->
+            <!--android:name="com.google.android.gms.maps.SupportMapFragment"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"/>-->
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/confirm"
+            android:layout_width="@dimen/_152sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/_24sdp"
+            android:layout_marginBottom="@dimen/_24sdp"
+            android:backgroundTint="@color/colorPrimary"
+            android:gravity="center"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:text="@string/confirm"
+            android:textColor="#ffff"
+            android:textSize="16sp"
+            app:cornerRadius="@dimen/_10sdp"
+            app:fontFamily="@font/nunito_bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:width="@dimen/_77sdp"
+            android:minHeight="@dimen/_40sdp"
+            android:text="@string/skip"
+            android:textAlignment="center"
+            android:textColor="#F5900E"
+            android:textSize="@dimen/_16sdp"
+            app:chipCornerRadius="@dimen/_10sdp"
+            app:chipStrokeColor="@color/colorPrimary"
+            app:chipStrokeWidth="2dp"
+            app:cornerRadius="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/confirm"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/confirm" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_24sdp"
+            android:layout_marginBottom="@dimen/_24sdp"
+            android:backgroundTint="@color/textWhite"
+            android:src="@drawable/ic_fab_location"
+            app:borderWidth="0dp"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toTopOf="@+id/confirm"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!--<com.google.android.material.card.MaterialCardView-->
+        <!--android:id="@+id/card"-->
+        <!--style="@style/InputCard"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="@dimen/_45sdp"-->
+        <!--android:layout_marginEnd="@dimen/_24sdp"-->
+        <!--android:layout_marginStart="@dimen/_24sdp"-->
+        <!--app:cardElevation="3dp"-->
+        <!--app:cardCornerRadius="@dimen/_12sdp"-->
+        <!--android:layout_marginTop="@dimen/_24sdp"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent">-->
+
+        <!--&lt;!&ndash;<EditText&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/etRestPhoneMail"&ndash;&gt;-->
+        <!--&lt;!&ndash;style="@style/InputText"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:drawableStart="@drawable/ic_add_to_group_search"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:drawablePadding="@dimen/_20sdp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:hint="@string/search_for_address"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:inputType="textAutoComplete"&ndash;&gt;-->
+        <!--&lt;!&ndash;tools:ignore="TextFields" />&ndash;&gt;-->
+
+        <!--</com.google.android.material.card.MaterialCardView>-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

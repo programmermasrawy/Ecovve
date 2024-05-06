@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <itemViewModel android:drawable="@drawable/btn_bg_press" android:state_pressed="true" />
+    <itemViewModel android:drawable="@drawable/btn_bg_dis" android:state_enabled="false" />
+    <itemViewModel android:drawable="@drawable/btn_bg" />
+</selector>
